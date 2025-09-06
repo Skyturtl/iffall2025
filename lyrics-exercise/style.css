@@ -4,8 +4,7 @@
 
 body{
   padding: 0;
-  background: #131ad4;
-  background: linear-gradient(to bottom, #131ad4, #11158c, #131ad4);
+  background: linear-gradient(to bottom, #24548b, #11158c, #24548b);
   text-align: center;
 }
 
@@ -47,7 +46,7 @@ p {
 .lyrics-container {
   padding: 20px;
   border-radius: 24px;
-  background-color: #11158c;
+  background-color: #00047b;
 }
 
 .intro,
@@ -58,7 +57,6 @@ p {
 .pre-chorus {
   padding: 1rem 0; 
   font-weight: bold;
-  text-shadow: #00000050 1px 1px 2px;
   margin: 1rem 0;
 }
 
@@ -66,9 +64,9 @@ p {
   background: radial-gradient(
     circle,
     #e3ebba,
-    #ff6f6f,
+    #ff9696,
     #e3ebba,
-    #ff6f6f
+    #ff9696
   );
   -webkit-text-fill-color: transparent; 
   -webkit-background-clip: text;
