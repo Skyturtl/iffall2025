@@ -27,32 +27,6 @@ h1 {
   text-align: center;
 }
 
-
-
-a#btn_spotify {
-  display: inline-block;
-  height: 50px;
-  box-sizing: border-box;
-  border-radius: 25px;
-  margin: auto;
-  margin-top: 100px;
-  padding: 10px 40px 0 40px;
-  background-color: #2ebd59;
-  border: 2px solid #2ebd59;
-  color: #fff;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all .5s;
-}
-
-a#btn_spotify:hover {
-  background-color: #fff;
-  border: 2px solid #000;
-  color: #000;
-}
-
 a#btn_amazon {
   display: block;
   width: 100px;
@@ -81,79 +55,6 @@ a#btn_amazon i {
 
 a#btn_amazon:hover i {
   transform: rotate(360deg);
-}
-
-a#btn_twitter {
-  display: inline-block;
-  height: 40px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin: auto;
-  margin-top: 105px;
-  padding: 10px 30px 0 30px;
-  background-color: #56cdf1;
-  color: #fff;
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-a#btn_twitter:hover {
-
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2ebfec+0,28a5cb+100 */
-  background: rgb(46,191,236); /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ebfec', endColorstr='#28a5cb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-}
-
-a#btn_indiegogo {
-  display: inline-block;
-  position: relative;
-  margin:auto;
-  margin-top: 100px;
-  padding: 8px 16px;
-  background-color: #fff;
-  color: #eb1478;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: -2px;
-  transition: all .2s;
-}
-
-a#btn_indiegogo:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: #eb1478;
-  transition: all .5s;
-}
-
-a#btn_indiegogo:hover {
-  color: #fff;
-}
-
-a#btn_indiegogo:hover:before {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-a#btn_indiegogo span {
-  position: relative;
-  z-index: 10;
 }
 
 .btn_wrapper {
@@ -446,22 +347,208 @@ a#btn_npr {
   font-size: 40px;
   font-weight: bold;
   font-family: 'Arial', sans-serif;
+}
+
+a#btn_npr .npr-letters {
+  display: flex;
   gap: 0px;
   transition: gap 0.5s ease;
 }
 
-a#btn_npr .npr_N {
+a#btn_npr span {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+a#btn_npr:hover .npr-N {
   background-color: #ee3b25;
+  padding: 5px 8px;
+  color: #fff;
 }
 
-a#btn_npr .npr_P {
+a#btn_npr:hover .npr-P {
   background-color: #000000;
+  padding: 5px 8px;
+  color: #fff;
 }
 
-a#btn_npr .npr_R {
+a#btn_npr:hover .npr-R {
   background-color: #4066b1;
+  padding: 5px 8px;
+  color: #fff;
 }
 
-a#btn_npr:hover {
-  gap: 20px;
+a#btn_spotify {
+  position: relative;
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1db954;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+a#btn_spotify i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+a#btn_spotify img:nth-of-type(1) {
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  transform: rotate(-45deg);
+}
+
+a#btn_spotify img:nth-of-type(2) {
+  position: absolute;
+  top: -80%;
+  left: 30%;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  transform: rotate(10deg);
+}
+
+a#btn_spotify img:nth-of-type(3) {
+  position: absolute;
+  top: -30%;
+  left: 100%;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  transform: rotate(-20deg);
+}
+
+a#btn_spotify:hover i {
+  animation: spin 2s linear infinite;
+}
+
+a#btn_spotify:hover img:nth-of-type(1) {
+  animation: shake1 2s infinite;
+}
+
+
+a#btn_spotify:hover img:nth-of-type(2) {
+  animation: shake2 2s infinite;
+}
+
+
+a#btn_spotify:hover img:nth-of-type(3) {
+  animation: shake3 2s infinite;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes shake1 {
+  from { transform: translate(0, 0) rotate(-45deg); }
+  33% { transform: translate(-5px, 5px) rotate(-40deg); }
+  66% { transform: translate(5px, -5px) rotate(-50deg); }
+  to { transform: translate(0, 0) rotate(-45deg); }
+}
+
+@keyframes shake2 {
+  from { transform: translate(0, 0) rotate(10deg); }
+  33% { transform: translate(5px, -5px) rotate(15deg); }
+  66% { transform: translate(-5px, 5px) rotate(5deg); }
+  to { transform: translate(0, 0) rotate(10deg); }
+}
+
+@keyframes shake3 {
+  from { transform: translate(0, 0) rotate(-20deg); }
+  33% { transform: translate(-5px, 5px) rotate(-15deg); }
+  66% { transform: translate(5px, -5px) rotate(-25deg); }
+  to { transform: translate(0, 0) rotate(-20deg); }
+}
+
+a#btn_twitter {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #56cdf1;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(86, 205, 241, 0.3);
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+a#btn_twitter i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+a#btn_twitter span#twitter {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translateY(-50%);
+  opacity: 0;
+  color: #000;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: opacity 0.1s ease, left 0.1s ease;
+}
+
+a#btn_twitter .chirp-nowx {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-30deg);
+  color: #000;
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+  white-space: pre-line;
+}
+
+a#btn_twitter:hover {
+  width: 120px;
+  background-color: #56cdf1;
+  box-shadow: 0 6px 12px rgba(86, 205, 241, 0.4);
+}
+
+a#btn_twitter:hover .chirp-nowx {
+  opacity: 0.8;
+  z-index: 10;
+}
+
+a#btn_twitter span#chirp{
+  color: #56cdf1;
+}
+
+a#btn_twitter:hover i {
+  transform: translate(-50%, -50%) scale(1.2) rotate(-15deg);
+  left: 25%;
+}
+
+a#btn_twitter:hover span#twitter {
+  opacity: 1;
+  left: 48%;
 }
