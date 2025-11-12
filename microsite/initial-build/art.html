@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wikipedia Microsite</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/c29d281419.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c29d281419.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#menu-toggle").hover(function () {
-          $("#menu").show();
-        }, function() {
-          $("#menu").hide();
-        });
+        $("#menu-toggle").hover(
+          function () {
+            $("#menu").show();
+          },
+          function () {
+            $("#menu").hide();
+          }
+        );
       });
     </script>
   </head>
@@ -34,15 +40,45 @@
           </ul>
         </div>
       </div>
-      <a href="index.html"><img id="logo" src="images/logo.png" alt="Microsite Logo" /></a>
+      <a href="index.html"
+        ><img id="logo" src="images/logo.png" alt="Microsite Logo"
+      /></a>
       <ul class="desktop-nav">
         <li><a href="history.html">History</a></li>
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
     <section id="rotunda">
-      <img>
-      <h2>The Rotunda</h2>
+      <div class="rotunda-hero">
+        <div class="circle">
+          <img src="images/rotunda.jpg" alt="The Rotunda" />
+        </div>
+
+        <div class="rotunda-content">
+          <h2>The Rotunda</h2>
+          <p>
+            The Apotheosis of Washington is the fresco painted by Greek-Italian
+            artist Constantino Brumidi in 1865 and visible through the oculus of
+            the dome in the rotunda of the United States Capitol Building in
+            Washington, D.C.
+            <br>
+            <br>
+            The fresco is suspended 180 feet (55 m) above the
+            rotunda floor and covers an area of 4,664 square feet (433.3 m2).
+            The figures painted are up to 15 feet (4.6 m) tall and are visible
+            from the floor below. The dome was completed in 1863, and Brumidi
+            painted it over the course of eleven months at the end of the
+            American Civil War. He was paid $40,000 ($821,652 in today's funds)
+            for the fresco.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-gallery">
+        <img class="left" src="images/rotunda.jpg" alt="thumb left" />
+        <img class="center" src="images/rotunda.jpg" alt="thumb center" />
+        <img class="right" src="images/rotunda.jpg" alt="thumb right" />
+      </div>
     </section>
   </body>
 </html>
