@@ -30,7 +30,7 @@ nav ul a {
 }
 
 nav #menu-toggle {
-  display: none;
+  display: block;
   color: #EEE;
   font-size: 32px;
   cursor: pointer;
