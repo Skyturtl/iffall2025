@@ -9,16 +9,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#menu-toggle").hover(function () {
-          $("#menu").show();
-        }, function() {
-          $("#menu").hide();
+        var $menu = $("#menu");
+        $menu.hide();
+
+        $("#menu-toggle").on("click", function (e) {
+          e.stopPropagation();
+          $menu.toggle();
+        });
+
+        $menu.on("click", function (e) {
+          e.stopPropagation();
+        });
+
+        $(document).on("click", function () {
+          $menu.hide();
         });
       });
     </script>
   </head>
   <body>
-    <nav>
+  <nav aria-label="Main navigation">
       <ul class="desktop-nav">
         <li><a href="art.html">Art</a></li>
         <li><a href="architecture.html">Architecture</a></li>
@@ -40,5 +50,58 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
+    <main class="history-page">
+      <nav class="timeline" aria-label="Century timeline">
+        <ul>
+          <li>
+            <div class="dot active" aria-hidden="true"></div>
+            <span>18th Century</span>
+          </li>
+          <li>
+            <div class="dot" aria-hidden="true"></div>
+            <span>19th Century</span>
+          </li>
+          <li>
+            <div class="dot" aria-hidden="true"></div>
+            <span>20th Century</span>
+          </li>
+          <li>
+            <div class="dot" aria-hidden="true"></div>
+            <span>21st Century</span>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="history-columns">
+        <figure>
+          <img src="images/rotunda.jpg" alt="William Thornton's approved design for the Capitol, 1793">
+          <figcaption>William Thornton's approved design for the Capitol, 1793<br><small>(Source: Wikipedia)</small></figcaption>
+        </figure>
+
+        <p>
+          Prior to establishing the nation's capital in Washington, D.C., the
+          United States Congress and its predecessors met at Independence Hall and
+          Congress Hall in Philadelphia, Federal Hall in New York City, and five
+          additional locations. The First Continental Congress brought together
+          delegates from the colonies in Philadelphia, followed by the Second
+          Continental Congress, which met from May 1775 to March 1781.
+        </p>
+      </section>
+
+      <section class="history-columns">
+        <p>
+          In accordance with the "Residence Act" passed by Congress in 1790,
+          President George Washington in 1791 selected the area that is now the
+          District of Columbia from land ceded by Maryland. He also selected three
+          commissioners to survey the site and oversee the design and construction
+          of the capital city and its government buildings.
+        </p>
+
+        <figure>
+          <img src="images/header.jpg" alt="Early photograph of the Capitol">
+          <figcaption>This image of "the Capitol" is the earliest surviving photograph of the building.<br><small>(Source: Library of Congress)</small></figcaption>
+        </figure>
+      </section>
+    </main>
   </body>
 </html>
