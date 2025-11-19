@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wikipedia Microsite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c29d281419.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var $menu = $("#menu");
+        $menu.hide();
+
+        $("#menu-toggle").on("click", function (e) {
+          e.stopPropagation();
+          $menu.toggle();
+        });
+
+        $menu.on("click", function (e) {
+          e.stopPropagation();
+        });
+
+        $(document).on("click", function () {
+          $menu.hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul class="desktop-nav">
+        <li><a href="art.html" class="active">Art</a></li>
+        <li><a href="architecture.html">Architecture</a></li>
+      </ul>
+      <div>
+        <i id="menu-toggle" class="fa-solid fa-bars"></i>
+        <div id="menu">
+          <ul class="mobile-nav">
+            <li><a href="art.html" class="active">Art</a></li>
+            <li><a href="architecture.html">Architecture</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="index.html"
+        ><img id="logo" src="images/logo.png" alt="Microsite Logo"
+      /></a>
+      <ul class="desktop-nav">
+        <li><a href="history.html">History</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <section id="rotunda">
+      <div class="rotunda-hero">
+        <div class="circle">
+          <img src="images/rotunda.jpg" alt="The Rotunda" />
+        </div>
+
+        <div class="rotunda-content">
+          <h2>The Rotunda</h2>
+          <p>
+            The Apotheosis of Washington is the fresco painted by Greek-Italian
+            artist Constantino Brumidi in 1865 and visible through the oculus of
+            the dome in the rotunda of the United States Capitol Building in
+            Washington, D.C.
+            <br>
+            <br>
+            The fresco is suspended 180 feet (55 m) above the
+            rotunda floor and covers an area of 4,664 square feet (433.3 m2).
+            The figures painted are up to 15 feet (4.6 m) tall and are visible
+            from the floor below. The dome was completed in 1863, and Brumidi
+            painted it over the course of eleven months at the end of the
+            American Civil War. He was paid $40,000 ($821,652 in today's funds)
+            for the fresco.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-gallery">
+        <img class="left" src="images/gallery1.jpg" alt="thumb left">
+        <img class="center" src="images/gallery1.jpg" alt="thumb center">
+        <img class="right" src="images/gallery1.jpg" alt="thumb right">
+      </div>
+      <div class="arrows">
+        <svg xmlns="http://www.w3.org/2000/svg" width="89" height="63" viewBox="0 0 89 63" fill="none">
+          <path d="M84.9773 2.50073C89.9609 18.5898 80.9639 50.7679 5.10327 50.7679M5.10327 50.7679L24.7767 36.2679M5.10327 50.7679L29.4983 60.5007" stroke="#424242" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="89" height="63" viewBox="0 0 89 63" fill="none">
+          <path d="M3.62503 2.50073C-1.35864 18.5898 7.6384 50.7679 83.499 50.7679M83.499 50.7679L63.8256 36.2679M83.499 50.7679L59.104 60.5007" stroke="#424242" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <script>
+      (function() {
+        const images = [
+          'images/gallery1.jpg',
+          'images/gallery2.jpg',
+          'images/gallery3.jpg',
+          'images/gallery4.jpg',
+          'images/gallery5.jpg',
+          'images/gallery6.jpg',
+          'images/gallery7.jpg'
+        ];
+
+        const leftImg = document.querySelector('.mini-gallery img.left');
+        const centerImg = document.querySelector('.mini-gallery img.center');
+        const rightImg = document.querySelector('.mini-gallery img.right');
+        const arrows = document.querySelectorAll('.arrows svg');
+        let currentIndices = [6, 0, 1];
+        let isAnimating = false;
+
+        function updateImages() {
+          leftImg.style.opacity = '0';
+          centerImg.style.opacity = '0';
+          rightImg.style.opacity = '0';
+
+          setTimeout(() => {
+            leftImg.src = images[currentIndices[0]];
+            centerImg.src = images[currentIndices[1]];
+            rightImg.src = images[currentIndices[2]];
+            leftImg.style.opacity = '1';
+            centerImg.style.opacity = '1';
+            rightImg.style.opacity = '1';
+            isAnimating = false;
+          }, 400);
+        }
+
+        arrows[1].style.cursor = 'pointer';
+        arrows[1].addEventListener('click', () => {
+          if (isAnimating) return;
+          isAnimating = true;
+          currentIndices = currentIndices.map(i => (i - 1 + 7) % 7);
+          updateImages();
+        });
+
+        arrows[0].style.cursor = 'pointer';
+        arrows[0].addEventListener('click', () => {
+          if (isAnimating) return;
+          isAnimating = true;
+          currentIndices = currentIndices.map(i => (i + 1) % 7);
+          updateImages();
+        });
+
+        leftImg.src = images[currentIndices[0]];
+        centerImg.src = images[currentIndices[1]];
+        rightImg.src = images[currentIndices[2]];
+      })();
+    </script>
+    
+    <footer>
+      <p>&copy; 2025 U.S. Capitol Building | Educational Microsite Project</p>
+    </footer>
+  </body>
+</html>
