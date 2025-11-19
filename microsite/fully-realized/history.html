@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wikipedia Microsite</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/c29d281419.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c29d281419.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -28,7 +31,7 @@
     </script>
   </head>
   <body>
-  <nav aria-label="Main navigation">
+    <nav aria-label="Main navigation">
       <ul class="desktop-nav">
         <li><a href="art.html">Art</a></li>
         <li><a href="architecture.html">Architecture</a></li>
@@ -39,69 +42,302 @@
           <ul class="mobile-nav">
             <li><a href="art.html">Art</a></li>
             <li><a href="architecture.html">Architecture</a></li>
-            <li><a href="history.html">History</a></li>
+            <li><a href="history.html" class="active">History</a></li>
             <li><a href="gallery.html">Gallery</a></li>
           </ul>
         </div>
       </div>
-      <a href="index.html"><img id="logo" src="images/logo.png" alt="Microsite Logo" /></a>
+      <a href="index.html"
+        ><img id="logo" src="images/logo.png" alt="Microsite Logo"
+      /></a>
       <ul class="desktop-nav">
-        <li><a href="history.html">History</a></li>
+        <li><a href="history.html" class="active">History</a></li>
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
     <main class="history-page">
       <nav class="timeline" aria-label="Century timeline">
         <ul>
-          <li>
+          <li data-century="18">
             <div class="dot active" aria-hidden="true"></div>
             <span>18th Century</span>
           </li>
-          <li>
+          <li data-century="19">
             <div class="dot" aria-hidden="true"></div>
             <span>19th Century</span>
           </li>
-          <li>
+          <li data-century="20">
             <div class="dot" aria-hidden="true"></div>
             <span>20th Century</span>
           </li>
-          <li>
+          <li data-century="21">
             <div class="dot" aria-hidden="true"></div>
             <span>21st Century</span>
           </li>
         </ul>
       </nav>
 
-      <section class="history-columns">
-        <figure>
-          <img src="images/rotunda.jpg" alt="William Thornton's approved design for the Capitol, 1793">
-          <figcaption>William Thornton's approved design for the Capitol, 1793<br><small>(Source: Wikipedia)</small></figcaption>
-        </figure>
+      <!-- 18th Century Content -->
+      <div class="century-content active" data-content="18">
+        <section class="history-columns">
+          <figure>
+            <img
+              src="images/history1.jpg"
+              alt="William Thornton's approved design for the Capitol, 1793"
+            />
+            <figcaption>
+              William Thornton's approved design for the Capitol, 1793<br /><small
+                >(Source: Wikipedia)</small
+              >
+            </figcaption>
+          </figure>
 
-        <p>
-          Prior to establishing the nation's capital in Washington, D.C., the
-          United States Congress and its predecessors met at Independence Hall and
-          Congress Hall in Philadelphia, Federal Hall in New York City, and five
-          additional locations. The First Continental Congress brought together
-          delegates from the colonies in Philadelphia, followed by the Second
-          Continental Congress, which met from May 1775 to March 1781.
-        </p>
-      </section>
+          <p>
+            Prior to establishing the nation's capital in Washington, D.C., the
+            United States Congress and its predecessors met at Independence Hall
+            and Congress Hall in Philadelphia, Federal Hall in New York City,
+            and five additional locations. The First Continental Congress
+            brought together delegates from the colonies in Philadelphia,
+            followed by the Second Continental Congress, which met from May 1775
+            to March 1781.
+          </p>
+        </section>
 
-      <section class="history-columns">
-        <p>
-          In accordance with the "Residence Act" passed by Congress in 1790,
-          President George Washington in 1791 selected the area that is now the
-          District of Columbia from land ceded by Maryland. He also selected three
-          commissioners to survey the site and oversee the design and construction
-          of the capital city and its government buildings.
-        </p>
+        <section class="history-columns">
+          <p>
+            After adopting the Articles of Confederation in York, Pennsylvania,
+            the Congress of the Confederation was formed and convened in
+            Philadelphia from March 1781 until June 1783, when a mob of angry
+            soldiers converged upon Independence Hall, demanding payment for
+            their service during the American Revolutionary War. Congress
+            requested that John Dickinson, the Governor of Pennsylvania, call up
+            the militia to defend Congress from attacks by the protesters. In
+            what became known as the Pennsylvania Mutiny of 1783, Dickinson
+            sympathized with the protesters and refused to remove them from
+            Philadelphia. As a result, Congress was forced to flee to Princeton,
+            New Jersey, on June 21, 1783, and met in Annapolis, Maryland, and
+            Trenton, New Jersey, before ending up in New York City.
+          </p>
 
-        <figure>
-          <img src="images/header.jpg" alt="Early photograph of the Capitol">
-          <figcaption>This image of "the Capitol" is the earliest surviving photograph of the building.<br><small>(Source: Library of Congress)</small></figcaption>
-        </figure>
-      </section>
+          <figure>
+            <img
+              src="images/history2.png"
+              alt="Early photograph of the Capitol"
+            />
+            <figcaption>
+              This image of "the Capitol" is the earliest surviving photograph
+              of the building.<br /><small>(Source: Library of Congress)</small>
+            </figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <!-- 19th Century Content -->
+      <div class="century-content" data-content="19">
+        <section class="history-columns">
+          <figure>
+            <img src="images/history3.jpg" alt="19th Century Capitol" />
+            <figcaption>
+              An 1800 portrait of the Capitol by William Russell Birch<br /><small
+                >(Source: Wikipedia)</small
+              >
+            </figcaption>
+          </figure>
+
+          <p>
+            The Senate (north) wing was completed in 1800. The Senate and House
+            shared quarters in the north wing until a temporary wooden pavilion
+            was erected on the future site of the House wing which served for a
+            few years for the Representatives to meet in, until the House of
+            Representatives (south) wing was finally completed in 1811, with a
+            covered wooden temporary walkway connecting the two wings with the
+            Congressional chambers where the future center section with rotunda
+            and dome would eventually be. However, the House of Representatives
+            moved early into their House wing in 1807. Though the Senate wing
+            building was incomplete, the Capitol held its first session of the
+            U.S. Congress with both chambers in session on November 17, 1800.
+            The National Legislature was moved to Washington prematurely, at the
+            urging of President John Adams, in hopes of securing enough Southern
+            votes in the Electoral College to be re-elected for a second term as
+            president.
+          </p>
+        </section>
+
+        <section class="history-columns">
+          <p>
+            In March 1803, James Madison appointed Benjamin Henry Latrobe to the
+            position of "Surveyor of Public Buildings", with the principal
+            responsibility of completing construction of the Capitol's south and
+            north wings. Work on the north wing began in November 1806. Although
+            occupied for only six years, it had suffered from falling plaster,
+            rotting floors and a leaking roof. Instead of repairing it, Latrobe
+            demolished, redesigned and rebuilt the interiors within the existing
+            brick and sandstone walls. Notably, Latrobe designed the Supreme
+            Court and Senate chambers. The former was a particular architectural
+            achievement; the size and structure of its vaulted, semi-circular
+            ceiling was then unprecedented in the United States.
+          </p>
+
+          <figure>
+            <img src="images/history4.jpg" alt="19th Century Capitol" />
+            <figcaption>
+              An 1814 portrait by George Munger of the U.S. Capitol after the
+              burning of Washington by the British Army during the War of
+              1812<br /><small>(Source: Wikipedia)</small>
+            </figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <!-- 20th Century Content -->
+      <div class="century-content" data-content="20">
+        <section class="history-columns">
+          <figure>
+            <img src="images/history5.jpg" alt="20th Century Capitol" />
+            <figcaption>
+              National Capitol Columns at the National Arboretum in 2008<br /><small
+                >(Source: Wikipedia)</small
+              >
+            </figcaption>
+          </figure>
+
+          <p>
+            In 1958, the next major expansion to the Capitol started, with a
+            33.5-foot (10.2 m) extension of the East Portico. In 1960, two years
+            into the project, the dome underwent a restoration. A marble
+            duplicate of the sandstone East Front was built 33.5 feet (10.2 m)
+            from the old Front. In 1962, a connecting extension repurposed what
+            had been an outside wall as an inside wall. In the process, the
+            original sandstone Corinthian columns were removed and replaced with
+            marble. It was not until 1984 that landscape designer Russell Page
+            created a suitable setting for them in a large meadow at the U.S.
+            National Arboretum in northeast Washington as the National Capitol
+            Columns, where they were combined with a reflecting pool into an
+            ensemble that reminds some visitors of the ruins of Persepolis, in
+            Persia.
+          </p>
+        </section>
+
+        <section class="history-columns">
+          <p>
+            Besides the columns, two hundred tons of the original stone were
+            removed in several hundred blocks, which were first stored on site
+            at the Capitol, and then stored in an unused yard at the Capitol
+            Power Plant until 1975. The same year, the power plant was renovated
+            and expanded in accordance with legislation passed in 1970, and the
+            stones fell to the Commission on the Extension of the United States
+            Capitol. As this body was long defunct, responsibility for the
+            material passed to the House and Senate office building commissions.
+            These commissions then arranged for the National Park Service to
+            store the debris at the back of a NPS maintenance yard in Rock Creek
+            Park
+          </p>
+
+          <figure>
+            <img src="images/history6.jpg" alt="20th Century Capitol" />
+            <figcaption>
+              Capitol Power Plant in 2023, viewed from Interstate 695<br /><small
+                >(Source: Wikipedia)</small
+              >
+            </figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <!-- 21st Century Content -->
+      <div class="century-content" data-content="21">
+        <section class="history-columns">
+          <figure>
+            <img src="images/history7.jpg" alt="21st Century Capitol" />
+            <figcaption>
+              The Capitol dome in 2006, topped by the Statue of Freedom<br /><small
+                >(Source: Wikipedia)</small
+              >
+            </figcaption>
+          </figure>
+
+          <p>
+            On June 20, 2000, ground was broken for the Capitol Visitor Center,
+            which opened on December 2, 2008. From 2001 through 2008, the East
+            Front of the Capitol (site of most presidential inaugurations until
+            Ronald Reagan began a new tradition in 1981) was the site of
+            construction for this massive underground complex, designed to
+            facilitate a more orderly entrance for visitors to the Capitol.
+            Prior to the center being built, visitors to the Capitol had to line
+            up in the basement of the Cannon House Office Building or the
+            Russell Senate Office Building. The new underground facility
+            provides a grand entrance hall, a visitors theater, room for
+            exhibits, and dining and restroom facilities, in addition to space
+            for building necessities such as a service tunnel.
+          </p>
+        </section>
+
+        <section class="history-columns">
+          <p>
+            A large-scale Capitol dome restoration project, the first extensive
+            such work since 1959-1960, began in 2014, with completion scheduled
+            before the 2017 presidential inauguration. As of 2012, $20 million
+            in work around the skirt of the dome had been completed, but other
+            deterioration, including at least 1,300 cracks in the brittle iron
+            that have led to rusting and seepage inside, needed to be addressed.
+            Before the August 2012 recess, the Senate Appropriations Committee
+            voted to spend $61 million to repair the exterior of the dome. The
+            House wanted to spend less on government operations, but in late
+            2013, it was announced that renovations would take place over two
+            years, starting in spring 2014.
+          </p>
+
+          <figure>
+            <img src="images/history8.jpg" alt="21st Century Capitol" />
+            <figcaption>
+              The Capitol's visitor center in March 2024<br /><small
+                >(Source: Wikipedia)</small
+              >
+            </figcaption>
+          </figure>
+        </section>
+      </div>
     </main>
+
+    <script>
+      // Timeline interaction script
+      document.addEventListener("DOMContentLoaded", function () {
+        const timelineDots = document.querySelectorAll(".timeline li");
+        const centuryContents = document.querySelectorAll(".century-content");
+
+        timelineDots.forEach((dot) => {
+          dot.style.cursor = "pointer";
+
+          dot.addEventListener("click", function () {
+            const century = this.getAttribute("data-century");
+
+            // Remove active class from all dots
+            timelineDots.forEach((d) =>
+              d.querySelector(".dot").classList.remove("active")
+            );
+
+            // Add active class to clicked dot
+            this.querySelector(".dot").classList.add("active");
+
+            // Hide all content sections
+            centuryContents.forEach((content) => {
+              content.classList.remove("active");
+            });
+
+            // Show selected century content
+            const selectedContent = document.querySelector(
+              `.century-content[data-content="${century}"]`
+            );
+            if (selectedContent) {
+              selectedContent.classList.add("active");
+            }
+          });
+        });
+      });
+    </script>
+
+    <footer>
+      <p>&copy; 2025 U.S. Capitol Building | Educational Microsite Project</p>
+    </footer>
   </body>
 </html>
